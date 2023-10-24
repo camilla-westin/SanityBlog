@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
+import { visionTool } from '@sanity/vision'
 import schemas from "./sanity/schemas";
 
 const config = defineConfig({
@@ -9,7 +10,8 @@ const config = defineConfig({
     apiVersion: "2023-09-20",
     basePath: "/admin",
     plugins: [
-      deskTool()
+      deskTool(),
+      visionTool()
     ],
     schema: { types: schemas }
 })
