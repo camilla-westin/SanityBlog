@@ -1,26 +1,21 @@
 import { getPosts } from "@/sanity/data/postsData"
+import PostItem from "./PostItem";
 
-const PostList = async() => {
+export const PostList = async() => {
     
     const posts = await getPosts();
 
     return (
         <section>
-        {posts.length === 0 ? (
-            <p>No shoes available</p>
-        ) : (
-        <ul className="grid md:grid-cols-2 gap-6 mt-4 lg:mt-12">
+            <ul>
             {posts.map((post) => (
-                <li key={post._id}>{post.title}</li>
+                <li key={post._id}>
+                    <PostItem post={post}  />
+                </li>
             ))}
-        </ul>
-      )}   
+            </ul>
         </section>
-    );
+    )
 }
 
 export default PostList;
-
-
-
-
