@@ -1,7 +1,7 @@
 import { getPosts } from "@/sanity/data/postsData"
 import PostItem from "./PostItem";
 
-export const PostList = async() => {
+export const PostsList = async() => {
     
     const posts = await getPosts();
 
@@ -18,4 +18,4 @@ export const PostList = async() => {
     )
 }
 
-export default PostList;
+export default PostsList;
