@@ -2,7 +2,6 @@ import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { visionTool } from '@sanity/vision'
 
-
 const config = defineConfig({
     projectId: 'js2nhuqq',
     dataset: "production", 
