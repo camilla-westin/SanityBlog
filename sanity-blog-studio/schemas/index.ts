@@ -3,7 +3,7 @@ import category from './category'
 import post from './post'
 import author from './author'
 
-const schemas = [
+export const schemas = [
     post, 
     author, 
     category, 
