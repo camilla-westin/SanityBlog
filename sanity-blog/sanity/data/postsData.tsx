@@ -15,5 +15,5 @@ export async function getPosts(): Promise<PostTypes[]> {
                 _createdAt,
                 title,
         }`
-	)
+	) 
 }
