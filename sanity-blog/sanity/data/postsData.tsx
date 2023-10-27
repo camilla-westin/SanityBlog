@@ -15,7 +15,31 @@ export async function getPosts(): Promise<PostTypes[]> {
                 _updatedAt,
                 title,
                 "author": author->{name},
-                categories[]->{title}
+                categories[]->{title},
+                "slug": slug.current
         }`
 	) 
+}
+
+export async function getSinglePost(slug: string): Promise<PostTypes> {
+        const currentSlug: string = slug;
+
+	const client = createClient({
+        projectId: 'js2nhuqq',
+        dataset: "production",
+        apiVersion: "2023-09-11",
+        useCdn: true
+	});
+
+	return client.fetch(
+        groq`*[_type == "post" && slug.current == $currentSlug][0] {
+                _id,
+                _updatedAt,
+                title,
+                "slug": slug.current,
+                "author": author->{name},
+                categories[]->{title}
+        }`,
+        { currentSlug }
+	)
 }
