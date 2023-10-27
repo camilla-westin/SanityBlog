@@ -14,6 +14,8 @@ export async function getPosts(): Promise<PostTypes[]> {
                 _id,
                 _createdAt,
                 title,
+                "author": author->{name},
+                categories[]->{title}
         }`
 	) 
 }
