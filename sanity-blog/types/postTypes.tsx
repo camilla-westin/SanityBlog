@@ -9,10 +9,10 @@ export interface CategoryProps {
 }
 
 export type PostTypes = {
-    _id: string;
-    _createdAt: Date;
+    _id: string,
+    _updatedAt: string,
     title: string,
     slug: string,
     author: AuthorProps,
-    categories: CategoryProps
+    categories: CategoryProps[]
 }

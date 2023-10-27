@@ -12,7 +12,7 @@ export async function getPosts(): Promise<PostTypes[]> {
 	return client.fetch(
         groq`*[_type == "post"][] {
                 _id,
-                _createdAt,
+                _updatedAt,
                 title,
                 "author": author->{name},
                 categories[]->{title}
