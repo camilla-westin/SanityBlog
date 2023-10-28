@@ -23,5 +23,7 @@ export type PostTypes = {
     slug: string,
     author: AuthorProps,
     body: Block[],
-    categories: CategoryProps[]
+    categories: CategoryProps[],
+    image: string;
+
 }

@@ -16,7 +16,8 @@ export async function getPosts(): Promise<PostTypes[]> {
                 title,
                 "author": author->{name},
                 categories[]->{title},
-                "slug": slug.current
+                "slug": slug.current,
+                "image": mainImage.asset->url
         }`
 	) 
 }
@@ -39,7 +40,9 @@ export async function getSinglePost(slug: string): Promise<PostTypes> {
                 "slug": slug.current,
                 "author": author->{name},
                 categories[]->{title},
-                body
+                body,
+                "image": mainImage.asset->url,
+
         }`,
         { currentSlug }
 	)
