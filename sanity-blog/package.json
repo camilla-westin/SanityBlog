@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.41.1",
+    "@portabletext/react": "^3.0.11",
     "@sanity/vision": "3.16.4",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",

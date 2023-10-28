@@ -38,7 +38,8 @@ export async function getSinglePost(slug: string): Promise<PostTypes> {
                 title,
                 "slug": slug.current,
                 "author": author->{name},
-                categories[]->{title}
+                categories[]->{title},
+                body
         }`,
         { currentSlug }
 	)
