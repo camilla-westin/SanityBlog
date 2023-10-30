@@ -53,7 +53,7 @@ export default function BlogSinglePage({ params }: Props) {
                         value={blogSingle.body}
                     />
                 </div>
-                <CategoryList categories={blogSingle.categories} />
+                <CategoryList categories={blogSingle.categories} onCategoryClick={() => {}} />
             </div>
         </article>
     )

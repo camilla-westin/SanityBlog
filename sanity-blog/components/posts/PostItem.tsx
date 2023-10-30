@@ -1,9 +1,9 @@
-import { PostTypes } from "@/types/postTypes"
+import { PostItemProps } from "@/types/postTypes"
 import CategoryList from "@/components/categories/CategoryList"
 import Link from 'next/link'
 import Image from "next/image";
 
-export const PostItem = ({ post }: { post: PostTypes}) => {
+const PostItem: React.FC<PostItemProps> = ({ post, onCategoryClick }) => {
     const date = new Date(post._updatedAt);
     const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
     return (
@@ -24,7 +24,7 @@ export const PostItem = ({ post }: { post: PostTypes}) => {
                 <span className="block">{formattedDate}</span>
                 <Link href={`/blog/${post.slug}`}><h2 className="text-2xl">{post.title}</h2></Link>
                 {post.author && post.author.name && <span>{post.author.name}</span>}
-                <CategoryList categories={post.categories} />
+                <CategoryList categories={post.categories} onCategoryClick={onCategoryClick} />
             </div>
         </div>
     )

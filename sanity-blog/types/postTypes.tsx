@@ -4,8 +4,17 @@ export interface AuthorProps {
 }
 
 export interface CategoryProps {
-    title: string,
-    category: string
+    title: string
+}
+
+export type CategoryItemProps = {
+  category: CategoryProps;
+  onCategoryClick: (categoryTitle: string) => void;
+}
+
+export type CategoryListProps = {
+  categories: CategoryProps[];
+  onCategoryClick: (categoryTitle: string) => void;
 }
 
 type Block = {
@@ -24,6 +33,10 @@ export type PostTypes = {
     author: AuthorProps,
     body: Block[],
     categories: CategoryProps[],
-    image: string;
+    image: string
+}
 
+export type PostItemProps = {
+    post: PostTypes;
+    onCategoryClick: (category: string) => void;
 }

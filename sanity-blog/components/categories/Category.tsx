@@ -1,7 +1,9 @@
-export const CategoryItem = ({ title }: { title: string }) => {
+import { CategoryItemProps } from "@/types/postTypes"
+
+const CategoryItem: React.FC<CategoryItemProps> = ({ category, onCategoryClick }) => {
     return (
-        <div className="bg-red-300 text-white rounded py-2 px-4 inline-block my-2 mr-2">
-            {title}
+        <div onClick={() => onCategoryClick(category.title)} className="bg-red-300 text-white rounded py-2 px-4 inline-block my-2 mr-2">
+            {category.title}
         </div>
     )
 }
