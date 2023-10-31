@@ -1,4 +1,5 @@
 # SanityBlog
+Not pretty, but it works!
 
 ## Getting Started
 
