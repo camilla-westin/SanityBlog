@@ -6,7 +6,6 @@ import CategoryList from '@/components/categories/CategoryList'
 import {PortableText} from '@portabletext/react'
 import Image from "next/image";
 
-
 type Props = {
     params: {
         singlepage: string;
